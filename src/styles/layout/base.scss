@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include roboto();
+  margin: 0;
 }
 
 .wrapper {

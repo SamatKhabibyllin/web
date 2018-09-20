@@ -1,0 +1,119 @@
+.welcome{
+  background: url("../../images/bg/hero.jpg") center center no-repeat;
+  background-size: cover;
+}
+.welcome__continer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  font-size: 16px;
+}
+.auth__btn{
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  border: 1px solid #fff;
+  line-height: 1;
+  padding: 18px 28px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto";
+}
+.user-block{
+  border-radius: 5px;
+  background-color: rgb(252, 252, 252);
+  opacity: 0.651;
+  padding-top: 38px;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  align-items: center;
+}
+.avatar{
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 18px;
+  font-family: "Roboto";
+}
+.my-name{
+  line-height: 1;
+  font-size: 28px;
+  color: rgb(69, 90, 100);
+  margin-bottom: 10px;
+}
+.user-block__desc{
+  line-height: 1;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(69, 90, 100, 0.8);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+.icons{
+  margin-bottom: 38px;
+  position: relative;
+  z-index: 2;
+}
+.icons__list{
+  display: flex;
+}
+.icons__item{
+  margin-right: 25px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.user-block__bottom{
+  background: rgb(0, 191, 165);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+.user-block__list{
+  display: flex;
+  justify-content: space-around;
+}
+.user-block__item{
+  border-right: 2px solid rgb(222, 227, 231);
+  &:last-child{
+    border-right: none;
+  }
+}
+.user-block__link{
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  height: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  transition: .2s;
+  border-right: 2px solid rgb(222, 227, 231);
+  &:last-child{
+    border-right: none;
+  }
+  &:hover{
+    background: rgb(0, 150, 136);
+  }
+}
+.copyright{
+  position: absolute;
+  bottom: 30px;
+  font-size: 15.771px;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255);
+  right: 50%;
+  margin-right: -225px;
+}

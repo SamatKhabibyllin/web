@@ -1,0 +1,33 @@
+extends ../main.layout.pug
+
+block content
+  .welcome
+    .container.welcome__continer
+      a.auth__btn(href="#") Авторизоваться
+      .user-block
+        .avatar
+          img.avatar__image(src="/images/content/user.jpg")
+        h1.my-name Самат Хабибуллин
+        .user-block__desc Личный сайт веб разаработчика
+        .icons
+          ul.icons__list
+            li.icons__item
+              a.icon__link(href="https://vk.com/feed")
+                img.icon-vk(src="/images/icons/vk.svg")
+            li.icons__item
+              a.icon__link(href="https://vk.com/feed")
+                img.icon-vk(src="/images/icons/vk.svg")
+            li.icons__item
+              a.icon__link(href="https://vk.com/feed")
+                img.icon-vk(src="/images/icons/vk.svg")
+        .user-block__bottom
+          ul.user-block__list
+            li.user-block__item
+              a.user-block__link(href="#") Мои работы
+            li.user-block__item
+              a.user-block__link(href="#") Обо мне
+            li.user-block__item
+              a.user-block__link(href="#") Блог
+      .copyright &copy; Самат Хабибуллин | создано с любовью в LoftSchool | 2018
+
+
