@@ -1,0 +1,76 @@
+extends ../main.layout.pug
+
+block content
+  section.hero
+    .hero__links
+      ul.socials
+        - var socials = ['vk', 'gh', 'in']
+        each item in socials
+         li.socials__item
+          a(href="#").socials__link.socials__link_vk
+        li.socials__item
+          a(href="#").socials__link.socials__link_gh
+        li.socials__item
+          a(href="#").socials__link.socials__link_in    
+    .hero__menu
+      .hamburger
+        .hamburger-line
+        .hamburger-line
+        .hamburger-line
+    .hero__container
+      .section__title
+      .user
+        .user__avatar Самат Хабибуллин
+        .user__info Личный сайт веб разработчика
+
+    .hero__btn
+      .arrow-down
+
+  section.works
+    .works__title
+      h2.title Мои работы
+    .work__container
+        .slider.js-slider
+          .slider__desc.js__desc
+            .slider__title
+              .subtitle
+            
+          .slider__wprapper
+            .slider__main-slide.js-main-slide
+              img.slider__main-slide-img
+            .slider__up-slide.js-scroll-up
+              img.slider__up-slide-img
+            .slider__down-slide.js-scroll-down
+              img.slider__down-slide-img
+
+  section.say-about
+    .say-about__container
+      .say-about__title
+        h2.title
+      .say-about__col
+        .say-about__text
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis cum exercitationem culpa laborum doloribus!
+        .say-about__botoom
+          .say-about-avatar
+            img.say-about-img(src="",alt="")
+      .say-about__col
+        .say-about__text
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis cum exercitationem culpa laborum doloribus!
+        .say-about__botoom
+          .say-about-avatar
+            img.say-about-img(src="",alt="")
+      form.form(action="#", method="post")
+        .form__title
+          .subtitile Связаться со мной
+        input.input(type="text", placeholder="Имя")
+        input.input(type="email", placeholder="Email")
+        textarea.textarea(placeholder="Ваше сообщение", name="message", cols="30", rows="10")
+        .form__bottom
+          input.submit(type="submit",value="отправть")
+          .reset Очистить
+    .say-about__btn
+      a.arrown-up
+
+      
+      
+

@@ -1,0 +1,65 @@
+extends ../main.layout.pug
+
+block content
+  section.hero
+    .hero__links
+      ul.socials
+        - var socials = ['vk', 'gh', 'in']
+        each item in socials
+         li.socials__item
+          a(href="#").socials__link.socials__link_vk
+        li.socials__item
+          a(href="#").socials__link.socials__link_gh
+        li.socials__item
+          a(href="#").socials__link.socials__link_in    
+    .hero__menu
+      .hamburger
+        .hamburger-line
+        .hamburger-line
+        .hamburger-line
+    .hero__container
+      .section__title
+      .user
+        .user__avatar Самат Хабибуллин
+        .user__info Личный сайт веб разработчика
+
+    .hero__btn
+      .arrow-down
+
+  section.blog
+    .blog-container
+      .blog__coll.blog__coll-right
+        nav.blog-nav
+          ul.blog-nav-list
+            li.blog-nav__item
+              a.blog-nav__link Самое свежее в SASS
+            li.blog-nav__item
+              a.blog-nav__link Самое свежее в SASS
+            li.blog-nav__item
+              a.blog-nav__link Самое свежее в SASS
+      .blog__coll.blog__coll-left
+        ul.blog-list
+          li.blog__item
+            h3.blog-title Самое свежее в SASS
+            .blog-desc
+              .date 23 сентября 2018
+            .blog-desc__text
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas tenetur suscipit quod? Ea praesentium saepe quaerat ut, asperiores assumenda architecto laudantium rem voluptates voluptatum necessitatibus, enim ullam? Itaque quae eius praesentium, accusamus repellendus deserunt earum ipsam eos suscipit aut quaerat labore, architecto quos, quasi nam temporibus laboriosam nesciunt eaque id blanditiis nisi! Quos ducimus, in inventore porro ratione ullam quae.
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum dolores veniam animi, eveniet earum aut maxime dignissimos adipisci provident ipsum magnam unde, architecto esse similique. Commodi explicabo, ut quas culpa nemo qui dolorem totam aperiam? Temporibus veritatis tempore accusamus reprehenderit ea alias hic quos, nesciunt sit! Iusto, vero adipisci.
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eaque facilis ab molestias ullam perferendis quas quisquam fugit maxime. Minus, cum! Neque aut eveniet cupiditate sequi laborum fugiat ipsam sit perferendis quo vitae dolor eum repellat suscipit natus, asperiores mollitia, illum ratione! Tempora natus molestias adipisci quis nemo maxime consequatur obcaecati voluptate neque? Esse, ex.
+          li.blog__item
+            h3.blog-title Самое свежее в SASS
+            .blog-desc
+              .date 23 сентября 2018
+            .blog-desc__text
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas tenetur suscipit quod? Ea praesentium saepe quaerat ut, asperiores assumenda architecto laudantium rem voluptates voluptatum necessitatibus, enim ullam? Itaque quae eius praesentium, accusamus repellendus deserunt earum ipsam eos suscipit aut quaerat labore, architecto quos, quasi nam temporibus laboriosam nesciunt eaque id blanditiis nisi! Quos ducimus, in inventore porro ratione ullam quae.
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum dolores veniam animi, eveniet earum aut maxime dignissimos adipisci provident ipsum magnam unde, architecto esse similique. Commodi explicabo, ut quas culpa nemo qui dolorem totam aperiam? Temporibus veritatis tempore accusamus reprehenderit ea alias hic quos, nesciunt sit! Iusto, vero adipisci.
+              p Lorem ipsum dolor sit amet con
+          li.blog__item
+            h3.blog-title Самое свежее в SASS
+            .blog-desc
+              .date 23 сентября 2018
+            .blog-desc__text
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas tenetur suscipit quod? Ea praesentium saepe quaerat ut, asperiores assumenda architecto laudantium rem voluptates voluptatum necessitatibus, enim ullam? Itaque quae eius praesentium, accusamus repellendus deserunt earum ipsam eos suscipit aut quaerat labore, architecto quos, quasi nam temporibus laboriosam nesciunt eaque id blanditiis nisi! Quos ducimus, in inventore porro ratione ullam quae.
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum dolores veniam animi, eveniet earum aut maxime dignissimos adipisci provident ipsum magnam unde, architecto esse similique. Commodi explicabo, ut quas culpa nemo qui dolorem totam aperiam? Temporibus veritatis tempore accusamus reprehenderit ea alias hic quos, nesciunt sit! Iusto, vero adipisci.
+              p Lorem ipsum dolor sit amet con
