@@ -20,19 +20,27 @@ block content
     .hero__container
       .section__title
       .user
-        .user__avatar Самат Хабибуллин
-        .user__info Личный сайт веб разработчика
+        .user__avatar
+          img.user-img(src="/images/content/user.jpg", alt="аватар")
+        .user__name
+          h2.my-name Самат Хабибуллин
+        .user__info 
+          p Личный сайт веб разработчика
 
     .hero__btn
       .arrow-down
 
   section.blog
+    .about__triangle
+      svg.triangle(viewbox="0 0 1000 85" preserveaspectration="none")
+        polygon(points="0,0  0,86  500.8,86  500.8,75.5").triangle-polygon.triangle-polygon_blog
+        polygon(points="1000,0  1000,86  500,86  500,75.5").triangle-polygon.triangle-polygon_blog
     .blog-container
       .blog__coll.blog__coll-right
         nav.blog-nav
           ul.blog-nav-list
-            li.blog-nav__item
-              a.blog-nav__link Самое свежее в SASS
+            li.blog-nav__item.blog-nav__item_active
+              a.blog-nav__link.blog-nav__link_active Самое свежее в SASS
             li.blog-nav__item
               a.blog-nav__link Самое свежее в SASS
             li.blog-nav__item

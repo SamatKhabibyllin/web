@@ -1,0 +1,113 @@
+.hero{
+  min-height: 600px;
+  background: url('../../images/bg/hero.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    display: block;
+    background: rgba(1, 102, 114, .3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.hero__links{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 9;
+}
+.hero__menu{
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  z-index: 9;
+}
+.hamburger{
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+.hamburger-line{
+  height: 5px;
+  width: 40px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background: #fff;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.hero__container{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 150px;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+}
+.user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user__avatar{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.my-name{
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 35px;
+  font-family: "Roboto";
+}
+.user__info {
+  p{
+    font-size: 16px;
+    font-family: "Roboto";
+  }
+}
+.hero__btn{
+  display: flex;
+  justify-content: center;
+}
+.socials{
+  display: flex;
+  align-items: center;
+}
+.socials__item{
+  margin-right: 25px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.socials__link{
+  position: relative;
+  z-index: 5;
+}
+.icon-social{
+  width: 25px;
+  height: 25px;
+  fill: #c1d5d5;
+  transition: .2s;
+  &:hover{
+    fill: #fff;
+    transition: .2s;
+  }
+}
+
+// .arrow-down{
+//   border-bottom: 5px solid #fff;
+//   border-right: 5px solid #fff;
+//   border-top: 5px solid transparent;
+//   border-left: 5px solid transparent;
+//   width: 20px;
+//   height: 20px;
+// }

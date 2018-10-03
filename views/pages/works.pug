@@ -20,8 +20,12 @@ block content
     .hero__container
       .section__title
       .user
-        .user__avatar Самат Хабибуллин
-        .user__info Личный сайт веб разработчика
+        .user__avatar
+          img.user-img(src="/images/content/user.jpg", alt="аватар")
+        .user__name
+          h2.my-name Самат Хабибуллин
+        .user__info 
+          p Личный сайт веб разработчика
 
     .hero__btn
       .arrow-down
@@ -33,7 +37,13 @@ block content
         .slider.js-slider
           .slider__desc.js__desc
             .slider__title
-              .subtitle
+              .subtitle Сайт магазина бургеров
+            .slider__desc-fecond
+              .tech
+                p HTML, CSS, Java Script
+            .slider__btn
+              a.btn.btn_green
+                span.btn-text Посмотреть сайт
             
           .slider__wprapper
             .slider__main-slide.js-main-slide
@@ -59,7 +69,7 @@ block content
         .say-about__botoom
           .say-about-avatar
             img.say-about-img(src="",alt="")
-      form.form(action="#", method="post")
+    form.form(action="#", method="post")
         .form__title
           .subtitile Связаться со мной
         input.input(type="text", placeholder="Имя")

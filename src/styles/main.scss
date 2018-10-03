@@ -4,6 +4,34 @@ $green: #16c2aa;
 $text-color: #455a64;
 $grey: #373e42;
 $light-grey: #dfdcd5;
+// resolutions
+$laptop: 960px;
+$tablets: 768px;
+$phones: 480px;
+
+//responsive
+@function rem($px) {
+  @return $px / 16px+0rem;
+}
+@mixin laptop {
+    @media screen and (max-width: $laptop){
+        @content;
+    }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
 
 @import 'normalize.css';
 @import './layout/fonts.scss';
@@ -13,3 +41,4 @@ $light-grey: #dfdcd5;
 @import './icons/_sass-inline-svg-data.scss';
 
 @import './blocks/**/*';
+

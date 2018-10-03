@@ -1,0 +1,13 @@
+.triangle{
+  display: block;
+  fill: transparent;
+ }
+.triangle-left_fill_white{
+  fill:#EFEEE9;
+}
+.triangle-right_fill_beige{
+  fill: #EEEBDF;
+  @include tablets{
+    fill:#EFEEE9;
+  }
+}

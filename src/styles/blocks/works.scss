@@ -1,0 +1,23 @@
+.works__title{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+  background: #faf8f0;
+}
+.slider{
+  display: flex;
+}
+.slider__desc,.slider__wprapper{
+  width: 50%;
+}
+.slider__desc{
+  background: #f0efe9;
+}
+.slider__wprapper{
+  background: #efebe0;
+}
+.slider__desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

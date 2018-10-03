@@ -4,14 +4,18 @@ block content
   section.hero
     .hero__links
       ul.socials
-        - var socials = ['vk', 'gh', 'in']
-        each item in socials
-         li.socials__item
+        li.socials__item
           a(href="#").socials__link.socials__link_vk
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#vk")
+        li.socials__item
+          a(href="#").socials__link.socials__link_in
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#github")
         li.socials__item
           a(href="#").socials__link.socials__link_gh
-        li.socials__item
-          a(href="#").socials__link.socials__link_in    
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#in")    
     .hero__menu
       .hamburger
         .hamburger-line
@@ -20,123 +24,165 @@ block content
     .hero__container
       .section__title
       .user
-        .user__avatar Самат Хабибуллин
-        .user__info Личный сайт веб разработчика
+        .user__avatar
+          img.user-img(src="/images/content/user.jpg", alt="аватар")
+        .user__name
+          h2.my-name Самат Хабибуллин
+        .user__info 
+          p Личный сайт веб разработчика
 
     .hero__btn
       .arrow-down
+        svg.svg-arrow
+              use(xlink:href="/src/images/icons/sprite.svg#arrow")
+         
   
   section.about
-    .about__col.about__col_bg_white
-      .about__title
-        h2.title Обо мне
-      .about__desc
-        .user-desc
-          .user-desc__pic
-            img(src="",alt="").user-desc__pic-elem
-          .user-desc__info
-            h3.user-desc__title
-              .subtitle Кто я
-            .user-desc__text
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, molestias aperiam? Similique aut quidem optio blanditiis nulla eius praesentium consequuntur repellendus consequatur. Provident eum cumque temporibus. Perspiciatis architecto dolores cumque illum? Aliquid libero consectetur praesentium, consequuntur neque qui, quam velit placeat vel tempore aut repellat perferendis delectus et quia nulla, nesciunt corrupti quis officia molestiae itaque natus dolores quidem? Qui culpa veniam atque pariatur aliquid ducimus, impedit ipsum natus accusamus delectus minus nam enim aspernatur nostrum, cumque illum possimus tempora quia voluptatum vero fuga! Illo, quia aliquam iste unde eum reiciendis neque, dolore magnam quasi dignissimos libero omnis tempora repudiandae.
+    .about__triangle
+      svg.triangle(viewbox="0 0 1000 85" preserveaspectration="none")
+        polygon(points="0,0  0,86  500.8,86  500.8,75.5").triangle-polygon.triangle-left.triangle-left_fill_white
+        polygon(points="1000,0  1000,86  500,86  500,75.5").triangle-polygon.triangle-right.triangle-right_fill_beige
+    .about__container
+      .about__col.about__col_bg_white
+        .about__title
+          h2.title Обо мне
+        .about__desc
+          .user-desc
+            .user-desc__pic
+              img(src="/images/content/user-full.jpg",alt="большой аватар").user-desc__pic-elem
+            .user-desc__info
+              h3.user-desc__title
+                .subtitle Кто я
+              .user-desc__text
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, molestias aperiam? Similique aut quidem optio blanditiis nulla eius praesentium consequuntur repellendus consequatur. Provident eum cumque temporibus. Perspiciatis architecto dolores cumque illum? Aliquid libero consectetur praesentium, consequuntur neque qui, quam velit placeat vel tempore aut repellat perferendis delectus et quia nulla, nesciunt corrupti quis officia molestiae itaque natus dolores quidem? Qui culpa veniam atque pariatur aliquid ducimus, impedit ipsum natus accusamus delectus minus nam enim aspernatur nostrum, cumque illum possimus tempora quia voluptatum vero fuga! Illo, quia aliquam iste unde eum reiciendis neque, dolore magnam quasi dignissimos libero omnis tempora repudiandae.
     
-    .about__col.about__col_bg_beige 
-      .about__right-title
-        .subtitle чем я могу быть вам полезен
-      .about__right-desc
-        p Больше всего меня привлекает Frontend разработка, но я также могу решать не сложные задачи на Backend. Но давайте по порядку
-      .about__info-container
-        ul.skils
-          li.skils__item
-            .skils-row
-              h5.skils-row__title Frontend
-              .skils-row__list
-                .skils-row__item
-                    svg.skill.skil_html
-                .skils-row__item
-                    svg.skill.skil_css
-                .skils-row__item
-                    svg.skill.skil_js
-          li.skils__item
-            .skils-row
-              h5.skils-row__title Backend
-              .skils-row__list
-                .skils-row__item
-                    svg.skill.skil_php
-                .skils-row__item
-                    svg.skill.skil_mySQl
-                .skils-row__item
-                    svg.skill.skil_nodes-js
-                .skils-row__item
-                    svg.skill.skil_mongo-db
-          li.skils__item
-            .skils-row
-              h5.skils-row__title WorkFlow
-              .skils-row__list
-                .skils-row__item
-                    svg.skill.skil_git
-                .skils-row__item
-                    svg.skill.skil_gulp
-                .skils-row__item
-                    svg.skill.skil_bower
+      .about__col.about__col_bg_beige 
+        .about__right-title
+          .subtitle чем я могу быть вам полезен
+        .about__right-desc
+          p Больше всего меня привлекает Frontend разработка, но я также могу решать не сложные задачи на Backend. Но давайте по порядку
+        .about__info-container
+          ul.skils
+            li.skils__item
+              .skils-row
+                h5.skils-row__title Frontend
+                .skils-row__list
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_html
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_css
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-55
+                        span.skils-row-name CCS3
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_js
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-95
+                        span.skils-row-name JavaScript & JQuery
+            li.skils__item
+              .skils-row
+                h5.skils-row__title Backend
+                .skils-row__list
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_php
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_mySQl
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_nodes-js
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_mongo-db
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+            li.skils__item
+              .skils-row
+                h5.skils-row__title WorkFlow
+                .skils-row__list
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_git
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_gulp
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
+                  .skils-row__item
+                      svg(viewbox="0 0 110 110").skill.skil_bower
+                        circle(r="45" cx="50%" cy="50%" fill="none").svg-circle__first
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 50 50)").svg-circle__second.circle-15
+                        span.skils-row-name HTML5
   
   section.contacts
     .contacts__underlay
+      .map
+        img(src="/images/content/map.jpg").map-image
     .contacts__container
       .user-data
         .user-data__title
-          .subtitle
+          .subtitle Контакты
         .uaser-data__container
           ul.user-contacts-list
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
-                .contacts-cell__title
+                .contacts-cell__title skype_kdn
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
-                .contacts-cell__title
+                .contacts-cell__title SamatKhabibyllin@gmail.com
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
-                .contacts-cell__title
+                .contacts-cell__title +7 987 002 74 50
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
-                .contacts-cell__title
+                .contacts-cell__title г. Казань ул. 2-ая Югозападная д.7
   footer.footer
     .footer__row.footer__row_border_bottom
       .footer__coll
         nav.menu
           ul.menu__list
             li.menu__item
-              a.menu__link Мои работы
+              a(href="#").menu__link Мои работы
             li.menu__item
-              a.menu__link Обо мне
+              a(href="#").menu__link Обо мне
             li.menu__item
-              a.menu__link Блог
+              a(href="#").menu__link Блог
             li.menu__item
-              a.menu__link Авторизация
+              a(href="#").menu__link Авторизация
       .footer__coll_right
         ul.socials
-          li.social__item
-            a(href="#", social__link_vk).social__link
-              svg
-          li.social__item
-            a(href="#", social__link_gh).social__link
-              svg
-          li.social__item
-            a(href="#", social__link_in_in).social__link
-              svg
-    .footer__row
+        li.socials__item.socials__item_circle
+          a(href="#").socials__link.socials__link_vk.socials__link_circle
+            svg(style="width: 20px; height: 20px;").icon-social.icons-social_circle
+              use(xlink:href="/images/icons/sprite.svg#vk")
+        li.socials__item.socials__item_circle
+          a(href="#").socials__link.socials__link_in.socials__link_circle
+            svg(style="width: 20px; height: 20px;").icon-social.icons-social_circle
+              use(xlink:href="/images/icons/sprite.svg#github")
+        li.socials__item_circle
+          a(href="#").socials__link.socials__link_gh.socials__link_circle
+            svg(style="width: 20px; height: 20px;").icon-social.icons-social_circle
+              use(xlink:href="/images/icons/sprite.svg#in")    
+    .footer__row.footer__row_padding
       .foter__col
+        .footer-text.footer-text_right
+          p  Я веб разработчик из Казани, и этот сайт я сделал в рамках обучения в школе онлайн образования LoftSchool.
+      .footer__col.footer__coll_right
         .footer-text
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni, vero soluta adipisci inventore blanditiis? Recusandae fugit explicabo sit ullam quae maxime, at ipsam dolore soluta nobis facere suscipit ut voluptate perferendis accusantium vitae molestiae quas aspernatur nesciunt quidem mollitia ipsa veritatis odio. Necessitatibus accusamus voluptas accusantium atque praesentium ratione?
-      .footer__col
-        .footer-text
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni, vero soluta adipisci inventore blanditiis? Recusandae fugit explicabo sit ullam quae maxime, at ipsam dolore soluta nobis facere suscipit ut voluptate perferendis accusantium vitae molestiae quas aspernatur nesciunt quidem mollitia ipsa veritatis odio. Necessitatibus accusamus voluptas accusantium atque praesentium ratione?
-          
-
-  
-
-
+          p &copy; Хабибуллин Самат | создано с любовью в LoftSchool | 2018

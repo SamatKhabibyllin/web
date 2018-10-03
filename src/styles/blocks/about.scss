@@ -1,0 +1,139 @@
+.about{
+  margin-top: -125px;
+  position: relative;
+  z-index: 5;
+}
+.about__container{
+  display: flex;
+  @include tablets{
+    flex-direction: column;
+  }
+ }
+.about__col{
+  width: 50%;
+  @include tablets{
+    width: 100%;
+  }
+}
+.about__col_bg_white{
+   background: #efeee9;
+   padding-left: 10px;
+}
+.about__col_bg_beige {
+  background: #eeebdf;
+  padding-right: 10px;
+}
+.about__title{
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 60px;
+}
+.about__right-title{
+  text-align: center;
+  padding-top: 20px;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  @include tablets{
+    padding-top: 50px;
+  }
+}
+.user-desc__pic{
+  text-align: center;
+  margin-bottom: 38px;
+}
+.user-desc__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-desc__title{
+  margin-bottom: 40px;
+}
+.user-desc__text{
+  width: 440px;
+  p{
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(69, 90, 100);
+  }
+}
+.about__right-desc{
+  padding-left: 36px;
+  padding-right: 15px;
+  margin-bottom: 60px;
+  p{
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(69, 90, 100);
+    @include tablets{
+      max-width: 472px;
+      margin: 0 auto;
+    }
+  }
+}
+.about__info-container{
+  padding-left: 36px;
+  @include tablets{
+    max-width: 596px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+.skils__item{
+  margin-bottom: 40px;
+}
+.skils-row__title{
+  font-size: 28px;
+  font-family: "Roboto";
+  color: rgb(69, 90, 100);
+  font-weight: 500;
+  @include tablets{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+.skils-row__list{
+  display: flex;
+  @include tablets{
+    justify-content: center;
+  }
+}
+.skils-row__item{
+  width: 110px;
+  height: 110px;
+  position: relative;
+  margin-right: 35px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.skils-row-name{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-size: 14px;
+  color: rgb(0, 191, 165);
+}
+.skill{
+  fill: none;
+  stroke-width: 15;
+}
+.svg-circle__first{
+  stroke: #dfdcd5;
+}
+.svg-circle__second{
+  stroke: #65ccbb;
+  stroke-dasharray: .0010 282.6;
+  transition: 1s;
+}
+.socials__link_circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #697e81;
+  border-radius: 50%;
+}
