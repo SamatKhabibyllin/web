@@ -6,6 +6,9 @@
   text-transform: uppercase;
   position: relative;
   display: inline-block;
+  @include phones{
+    font-size: 35px;
+  }
   &:before{
     content: '';
     display: block;
@@ -16,7 +19,12 @@
     left: -34px;
     top: 50%;
     margin-top: -4px;
-    
+    @include tablets{
+      background: #c3c4c0;
+    }
+    @include phones{
+      background: #cbcbc8;
+    }
   }
   &:after{
     content: '';
@@ -28,8 +36,17 @@
     right: -34px;
     top: 50%;
     margin-top: -4px;
+    @include tablets{
+      background: #c3c4c0;
+    }
+    @include phones{
+      background: #cbcbc8;
+    }
   }
 }
+.subtitle_width{
+  line-height: 1.333;
+  }
 .subtitle{
   font-size: 35px;
   font-family: 'bernier';
@@ -39,6 +56,9 @@
   display: inline-block;
   position: relative;
   line-height: 1.171;
+  @include phones{
+    font-size: 21.304px;
+  }
   &:before{
     content: '';
     display: block;
@@ -48,6 +68,12 @@
     background-color: #8d8f94;
     left: -34px;
     top: 12px;
+     @include tablets{
+      background: #c3c4c0;
+    }
+    @include phones{
+      background: #cbcbc8;
+    }
   }
   &:after{
     content: '';
@@ -58,6 +84,14 @@
     background-color: #8d8f94;
     right: -34px;
     top: 12px;
+     @include tablets{
+      background: #c3c4c0;
+    }
+    @include phones{
+      background: #cbcbc8;
+    }
   }
 }
-
+.title_color_white{
+  color: #fff;
+}

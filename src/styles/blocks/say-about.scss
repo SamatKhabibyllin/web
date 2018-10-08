@@ -1,3 +1,152 @@
 .say-about{
-  background: url('');
+  background: url('/images/bg/bg-form.jpg') center center no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include tablets{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include phones{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.say-about__title{
+  text-align: center;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+  @include tablets{
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  @include phones{
+    max-width: 245px;
+    margin-bottom: 30px;
+  }
+}
+.say-about__container{
+  max-width: 780px;
+  margin: 0 auto;
+}
+.recommendations{
+  display: flex;
+  margin-bottom: 70px;
+  @include tablets{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  @include phones{
+    flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 60px;
+  }
+}
+.recommendation__left,.recommendation__right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include phones{
+    width: 100%;
+  }
+}
+.recommendation__left{
+  @include phones{
+    margin-bottom: 20px;
+  }
+}
+.recommendation-text{
+  p{
+    font-size: 16px;
+    color: rgb(69, 90, 100);
+    @include phones{
+      font-size: 14px;
+    }
+  }
+  margin-bottom: 15px;
+}
+.recommendation-user{
+  display: flex;
+  align-items: center;
+}
+.recommendation__avatar{
+  margin-right: 20px;
+}
+.recommendation-name{
+  font-size: 16px;
+  color: rgb(32, 181, 161);
+  @include phones{
+    font-size: 14px;
+  }
+}
+.recommendation-title{
+  font-weight: 500;
+}
+.form{
+  width: 380px;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+  padding-top: 35px;
+  @include phones{
+    width: auto;
+  }
+}
+.form-container{
+  @include phones{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.form__title{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.input-block{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.input,.taxtarea{
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  @include phones{
+    &::placeholder{
+      font-size: 14px;
+    }
+  }
+}
+.taxtarea{
+  height: 140px;
+}
+.form-btns{
+  display: flex;
+  border-radius: 0 0 5px 5px;
+}
+.submit,.reset{
+  width: 50%;
+  border: none;
+  height: 45px;
+  font-weight: 600;
+  cursor: pointer;
+  @include phones{
+    font-size: 14px;
+  }
+}
+.submit{
+  background: #26bbaa;
+  border-radius: 0 0 0 5px;
+  color: #fff;
+  border-right: 1px solid #82cfc9;
+}
+.reset{
+  background: #268b8a;
+  border-radius: 0 0 5px 0;
+  color: #fff;
+  border-left: 1px solid #82b7b9;
 }

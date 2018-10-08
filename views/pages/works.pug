@@ -4,14 +4,18 @@ block content
   section.hero
     .hero__links
       ul.socials
-        - var socials = ['vk', 'gh', 'in']
-        each item in socials
-         li.socials__item
+        li.socials__item
           a(href="#").socials__link.socials__link_vk
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#vk")
+        li.socials__item
+          a(href="#").socials__link.socials__link_in
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#github")
         li.socials__item
           a(href="#").socials__link.socials__link_gh
-        li.socials__item
-          a(href="#").socials__link.socials__link_in    
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#in")    
     .hero__menu
       .hamburger
         .hamburger-line
@@ -29,8 +33,14 @@ block content
 
     .hero__btn
       .arrow-down
+        svg.svg-arrow
+              use(xlink:href="/src/images/icons/sprite.svg#arrow")
 
   section.works
+    .about__triangle
+      svg.triangle(viewbox="0 0 1000 85" preserveaspectration="none")
+        polygon(points="0,0  0,86  500.8,86  500.8,75.5").triangle-polygon.triangle-polygon_works
+        polygon(points="1000,0  1000,86  500,86  500,75.5").triangle-polygon.triangle-polygon_works
     .works__title
       h2.title Мои работы
     .work__container
@@ -38,48 +48,76 @@ block content
           .slider__desc.js__desc
             .slider__title
               .subtitle Сайт магазина бургеров
-            .slider__desc-fecond
+            .slider-line
+            .slider__desc-second
               .tech
                 p HTML, CSS, Java Script
+            .slider-line
             .slider__btn
-              a.btn.btn_green
+              a(href="#").btn.btn_green
                 span.btn-text Посмотреть сайт
             
-          .slider__wprapper
-            .slider__main-slide.js-main-slide
-              img.slider__main-slide-img
-            .slider__up-slide.js-scroll-up
-              img.slider__up-slide-img
-            .slider__down-slide.js-scroll-down
-              img.slider__down-slide-img
-
+          
+          .slider__main-slide.js-main-slide
+            img(src="/images/content/works-1.png" alt="").slider__main-slide-img
+          .slider__up-slide.js-scroll-up
+            img(src="/images/content/works-2.png" alt="").slider__up-slide-img
+            .slider__arrow
+              svg.slider-arrow-svg.slider-arrow-up
+                use(xlink:href="/images/icons/sprite.svg#portf_arrow_down")   
+          .slider__down-slide.js-scroll-down
+            img(src="/images/content/works-3.png" alt="").slider__down-slide-img
+            .slider__arrow
+              svg.slider-arrow-svg.slider-arrow-down
+                use(xlink:href="/images/icons/sprite.svg#portf_arrow_up")
+          div
+          div
+          div
+          div
   section.say-about
+    .say-about__title
+      h2.title что обо мне говорят
     .say-about__container
-      .say-about__title
-        h2.title
-      .say-about__col
-        .say-about__text
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis cum exercitationem culpa laborum doloribus!
-        .say-about__botoom
-          .say-about-avatar
-            img.say-about-img(src="",alt="")
-      .say-about__col
-        .say-about__text
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis cum exercitationem culpa laborum doloribus!
-        .say-about__botoom
-          .say-about-avatar
-            img.say-about-img(src="",alt="")
-    form.form(action="#", method="post")
-        .form__title
-          .subtitile Связаться со мной
-        input.input(type="text", placeholder="Имя")
-        input.input(type="email", placeholder="Email")
-        textarea.textarea(placeholder="Ваше сообщение", name="message", cols="30", rows="10")
-        .form__bottom
-          input.submit(type="submit",value="отправть")
-          .reset Очистить
-    .say-about__btn
-      a.arrown-up
+      .recommendations
+        .recommendation__left
+          .recommendation-text
+            p Этот парень проходил обучение не где то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .recommendation-user
+            .recommendation__avatar
+              .recommendation-pic
+                .recommendation-user
+                  img(src="/images/content/kovdm.png", alt="Ковальчук Дмитрий").recommendation-user
+            .recommendation-name
+              .recommendation-title Ковальчук Дмитрий
+              .recommendation-desc основатель LoftSchool
+        .recommendation__right
+          .recommendation-text
+            p Этот код выдержит любые испытания. Только пожалуйста не загружайте сайт на слишком старых браузерах!
+          .recommendation-user
+            .recommendation__avatar
+              .recommendation-pic
+                .recommendation-user
+                  img(src="/images/content/sabvl.png", alt="Сабанцев Владимир").recommendation-user
+            .recommendation-name
+              .recommendation-title Сабанцев Владимир
+              .recommendation-desc преподаватель
+      .form-container
+        form(action="", method="post").form
+          .form__title
+            .subtitle связаться со мной
+          .input-block
+            input(type="text" placeholder="Имя").input.input-name
+            input(type="email" placeholder="Email").input.input-email
+            textarea(name="message", placeholder="Ваше сообщение").taxtarea
+          .form-btns
+            input(type="submit" value="Отправить").submit
+            input(type="reset" value="Очистить").reset
+        .arrow-up
+          a(href="#").arrow-up__links
+              svg.arrow-up-svg
+                use(xlink:href="/images/icons/sprite.svg#arrow")  
+
+
 
       
       

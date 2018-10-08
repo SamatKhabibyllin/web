@@ -4,14 +4,18 @@ block content
   section.hero
     .hero__links
       ul.socials
-        - var socials = ['vk', 'gh', 'in']
-        each item in socials
-         li.socials__item
+        li.socials__item
           a(href="#").socials__link.socials__link_vk
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#vk")
+        li.socials__item
+          a(href="#").socials__link.socials__link_in
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#github")
         li.socials__item
           a(href="#").socials__link.socials__link_gh
-        li.socials__item
-          a(href="#").socials__link.socials__link_in    
+            svg.icon-social
+              use(xlink:href="/images/icons/sprite.svg#in")    
     .hero__menu
       .hamburger
         .hamburger-line
@@ -29,6 +33,11 @@ block content
 
     .hero__btn
       .arrow-down
+        svg.svg-arrow
+              use(xlink:href="/src/images/icons/sprite.svg#arrow")
+
+    .hero__btn
+      .arrow-down
 
   section.blog
     .about__triangle
@@ -36,7 +45,7 @@ block content
         polygon(points="0,0  0,86  500.8,86  500.8,75.5").triangle-polygon.triangle-polygon_blog
         polygon(points="1000,0  1000,86  500,86  500,75.5").triangle-polygon.triangle-polygon_blog
     .blog-container
-      .blog__coll.blog__coll-right
+      .blog__coll.blog__coll-left
         nav.blog-nav
           ul.blog-nav-list
             li.blog-nav__item.blog-nav__item_active
@@ -45,7 +54,7 @@ block content
               a.blog-nav__link Самое свежее в SASS
             li.blog-nav__item
               a.blog-nav__link Самое свежее в SASS
-      .blog__coll.blog__coll-left
+      .blog__coll.blog__coll-right
         ul.blog-list
           li.blog__item
             h3.blog-title Самое свежее в SASS

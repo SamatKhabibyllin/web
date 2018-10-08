@@ -34,7 +34,7 @@ block content
     .hero__btn
       .arrow-down
         svg.svg-arrow
-              use(xlink:href="/src/images/icons/sprite.svg#arrow")
+          use(xlink:href="/src/images/icons/sprite.svg#arrow")
          
   
   section.about
@@ -46,6 +46,10 @@ block content
       .about__col.about__col_bg_white
         .about__title
           h2.title Обо мне
+          .about__svg-title
+            svg.svg-about_header
+              use(xlink:href="/src/images/icons/sprite.svg#about_header")
+
         .about__desc
           .user-desc
             .user-desc__pic
@@ -54,11 +58,12 @@ block content
               h3.user-desc__title
                 .subtitle Кто я
               .user-desc__text
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, molestias aperiam? Similique aut quidem optio blanditiis nulla eius praesentium consequuntur repellendus consequatur. Provident eum cumque temporibus. Perspiciatis architecto dolores cumque illum? Aliquid libero consectetur praesentium, consequuntur neque qui, quam velit placeat vel tempore aut repellat perferendis delectus et quia nulla, nesciunt corrupti quis officia molestiae itaque natus dolores quidem? Qui culpa veniam atque pariatur aliquid ducimus, impedit ipsum natus accusamus delectus minus nam enim aspernatur nostrum, cumque illum possimus tempora quia voluptatum vero fuga! Illo, quia aliquam iste unde eum reiciendis neque, dolore magnam quasi dignissimos libero omnis tempora repudiandae.
+                p Я веб разработчик из Казани. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты
+                p Этот сайт я сделал в рамках обучения в  школе онлайн образования LoftSchool. Чуть поезже я освежу в нём свой контент. А пока смотрите как тут все классно и красиво.
     
       .about__col.about__col_bg_beige 
         .about__right-title
-          .subtitle чем я могу быть вам полезен
+          .subtitle.subtitle_width чем я могу быть вам полезен
         .about__right-desc
           p Больше всего меня привлекает Frontend разработка, но я также могу решать не сложные задачи на Backend. Но давайте по порядку
         .about__info-container
@@ -139,18 +144,26 @@ block content
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
+                  svg.icon-contacts
+                    use(xlink:href="/images/icons/sprite.svg#skype")    
                 .contacts-cell__title skype_kdn
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
+                  svg.icon-contacts
+                    use(xlink:href="/images/icons/sprite.svg#telegram")
                 .contacts-cell__title SamatKhabibyllin@gmail.com
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
+                  svg.icon-contacts
+                    use(xlink:href="/images/icons/sprite.svg#phone")
                 .contacts-cell__title +7 987 002 74 50
             li.user-contacts-list__item
               .contacts-cell
                 .contacts-cell__icon
+                  svg.icon-contacts
+                    use(xlink:href="/images/icons/sprite.svg#map_n")
                 .contacts-cell__title г. Казань ул. 2-ая Югозападная д.7
   footer.footer
     .footer__row.footer__row_border_bottom

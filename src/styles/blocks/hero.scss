@@ -19,12 +19,20 @@
   top: 30px;
   left: 30px;
   z-index: 9;
+  @include phones{
+    right: 10px;
+    top: 15px;
+  }
 }
 .hero__menu{
   position: absolute;
   top: 28px;
   right: 30px;
   z-index: 9;
+  @include phones{
+    right: 10px;
+    top: 10px;
+  }
 }
 .hamburger{
   cursor: pointer;
@@ -39,6 +47,12 @@
   background: #fff;
   &:last-child{
     margin-bottom: 0;
+  }
+  @include phones{
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+
   }
 }
 .hero__container{
@@ -67,11 +81,18 @@
   margin-bottom: 5px;
   font-size: 35px;
   font-family: "Roboto";
+  @include phones{
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
 }
 .user__info {
   p{
     font-size: 16px;
     font-family: "Roboto";
+    @include phones{
+      font-size: 14px;
+    }
   }
 }
 .hero__btn{
@@ -101,8 +122,16 @@
     fill: #fff;
     transition: .2s;
   }
+  @include phones{
+    width: 20px;
+    height: 20px;
+  }
 }
-
+@media screen and (min-width: 1660px){
+  .about{
+    margin-top: -150px;
+  }
+}
 // .arrow-down{
 //   border-bottom: 5px solid #fff;
 //   border-right: 5px solid #fff;

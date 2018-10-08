@@ -2,6 +2,9 @@
   margin-top: -125px;
   position: relative;
   z-index: 5;
+  @include phones{
+    margin-top: -100px;
+  }
 }
 .about__container{
   display: flex;
@@ -18,15 +21,45 @@
 .about__col_bg_white{
    background: #efeee9;
    padding-left: 10px;
+   padding-bottom: 40px;
+   @include phones{
+     padding-left: 0;
+     padding-bottom: 25px;
+   }
 }
 .about__col_bg_beige {
   background: #eeebdf;
   padding-right: 10px;
+  @include phones{
+    padding-right: 0;
+  }
+  @include wide{
+    position: relative;
+  }
 }
 .about__title{
   text-align: center;
   padding-top: 20px;
   margin-bottom: 60px;
+  position: relative;
+  @include phones{
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  @include wide{
+    position: absolute;
+    left: 7%;
+  }
+}
+.about__svg-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.svg-about_header{
+  width: 360px;
+  height: 60px;
+  fill: #e6e5e0;
 }
 .about__right-title{
   text-align: center;
@@ -38,18 +71,44 @@
   @include tablets{
     padding-top: 50px;
   }
+  @include phones{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    width: 140px;
+  }
+}
+.user-desc{
+  @include wide{
+    padding-right: 20px;
+  }
 }
 .user-desc__pic{
   text-align: center;
   margin-bottom: 38px;
+  @include phones{
+    margin-bottom: 28px;
+  }
+  @include wide{
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .user-desc__info{
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include wide{
+    align-items: flex-end;
+  }
 }
 .user-desc__title{
   margin-bottom: 40px;
+  @include phones{
+    margin-bottom: 20px;
+  }
+  @include wide{
+    margin-right: 180px;
+  }
 }
 .user-desc__text{
   width: 440px;
@@ -57,12 +116,29 @@
     font-size: 16px;
     font-family: "Roboto";
     color: rgb(69, 90, 100);
+    margin-bottom: 20px;
+    @include phones{
+      font-size: 14px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  @include tablets{
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 .about__right-desc{
   padding-left: 36px;
   padding-right: 15px;
   margin-bottom: 60px;
+  @include phones{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+  }
   p{
     font-size: 16px;
     font-family: "Roboto";
@@ -71,7 +147,10 @@
       max-width: 472px;
       margin: 0 auto;
     }
-  }
+    @include phones{
+      font-size: 14px;
+    }
+   }
 }
 .about__info-container{
   padding-left: 36px;
@@ -92,6 +171,10 @@
   @include tablets{
     text-align: center;
     margin-bottom: 15px;
+  }
+  @include phones{
+    font-size: 21px;
+    margin-bottom: 20px;
   }
 }
 .skils-row__list{

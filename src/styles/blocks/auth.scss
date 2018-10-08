@@ -8,8 +8,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
   height: 100vh;
   font-size: 16px;
 }
@@ -19,20 +17,32 @@
   right: 20px;
   border: 1px solid #fff;
   line-height: 1;
-  padding: 18px 28px;
+  padding: 15px 28px;
   color: #fff;
   text-decoration: none;
   font-family: "Roboto";
+  border-radius: 5px;
+  @include tablets{
+    right: 24px;
+  }
+  @include phones{
+    font-size: 14px;
+    right: 22%;
+    top: 10px;
+  }
 }
 .user-block{
   border-radius: 5px;
   background-color: rgb(252, 252, 252);
-  opacity: 0.651;
+  opacity: 0.78;
   padding-top: 38px;
   display: flex;
   flex-direction: column;
   width: 380px;
   align-items: center;
+  @include phones{
+    width: 300px;
+  }
 }
 .avatar{
   width: 142px;
@@ -42,11 +52,15 @@
   margin-bottom: 18px;
   font-family: "Roboto";
 }
-.my-name{
+.my-name_welcome{
   line-height: 1;
   font-size: 28px;
   color: rgb(69, 90, 100);
   margin-bottom: 10px;
+  font-weight: 500;
+  @include phones{
+    font-size: 21px;
+  }
 }
 .user-block__desc{
   line-height: 1;
@@ -56,6 +70,9 @@
   margin-bottom: 32px;
   position: relative;
   z-index: 2;
+  @include phones{
+    font-size: 14px;
+  }
 }
 .icons{
   margin-bottom: 38px;
@@ -107,6 +124,11 @@
   &:hover{
     background: rgb(0, 150, 136);
   }
+  @include phones{
+    font-size: 14px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 .copyright{
   position: absolute;
@@ -116,4 +138,20 @@
   color: rgb(255, 255, 255);
   right: 50%;
   margin-right: -225px;
+  @include phones{
+    font-size: 14px;
+    margin: 0;
+    font-weight: 300;
+  }
+}
+}
+
+.icon-social_welcome{
+  &:hover{
+    fill: #00bfa5 !important;
+    transition: .2s;
+  }
+  @include phones{
+    width: 30px !important;
+  }
 }

@@ -5,20 +5,22 @@ $text-color: #455a64;
 $grey: #373e42;
 $light-grey: #dfdcd5;
 // resolutions
+$wide: 1800px;
 $laptop: 960px;
 $tablets: 768px;
 $phones: 480px;
 
 //responsive
-@function rem($px) {
-  @return $px / 16px+0rem;
+@mixin wide {
+  @media screen and (min-width: $wide){
+    @content;
+}
 }
 @mixin laptop {
     @media screen and (max-width: $laptop){
         @content;
     }
 }
-
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;
@@ -30,8 +32,9 @@ $phones: 480px;
   }
 }
 @function rem($px) {
-  @return $px / 16px + 0rem;
+  @return $px / 16px+0rem;
 }
+
 
 @import 'normalize.css';
 @import './layout/fonts.scss';

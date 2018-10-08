@@ -2,24 +2,27 @@ extends ../main.layout.pug
 
 block content
   .welcome
-    .container.welcome__continer
+    .welcome__continer
       a.auth__btn(href="#") Авторизоваться
       .user-block
         .avatar
           img.avatar__image(src="/images/content/user.jpg")
-        h1.my-name Самат Хабибуллин
+        h1.my-name_welcome Самат Хабибуллин
         .user-block__desc Личный сайт веб разаработчика
         .icons
-          ul.icons__list
-            li.icons__item
-              a.icon__link(href="https://vk.com/feed")
-                img.icon-vk(src="/images/icons/vk.svg")
-            li.icons__item
-              a.icon__link(href="https://vk.com/feed")
-                img.icon-vk(src="/images/icons/vk.svg")
-            li.icons__item
-              a.icon__link(href="https://vk.com/feed")
-                img.icon-vk(src="/images/icons/vk.svg")
+          ul.socials
+            li.socials__item
+              a(href="#").socials__link.socials__link_vk
+                svg.icon-social.icon-social_welcome
+                  use(xlink:href="/images/icons/sprite.svg#vk")
+            li.socials__item
+              a(href="#").socials__link.socials__link_in
+                svg.icon-social.icon-social_welcome
+                  use(xlink:href="/images/icons/sprite.svg#github")
+            li.socials__item
+              a(href="#").socials__link.socials__link_gh
+                svg.icon-social.icon-social_welcome
+                  use(xlink:href="/images/icons/sprite.svg#in")    
         .user-block__bottom
           ul.user-block__list
             li.user-block__item

@@ -1,6 +1,5 @@
 .blog{
-  padding-top: 70px;
-  margin-top: -195px;
+  margin-top: -125px;
   z-index: 10;
   position: relative;
 }
@@ -8,13 +7,32 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-}
-.blog__coll-right{
-  max-width: 310px;
+  padding-top: 60px;
+  @include tablets{
+    padding-top: 40px;
+  }
+  @include phones{
+    padding-top: 30px;
+  }
 }
 .blog__coll-left{
+  max-width: 310px;
+  @include tablets{
+    display: none;
+  }
+}
+.blog__coll-right{
   max-width: 790px;
   padding-left: 100px;
+  @include tablets{
+    width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  @include phones{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 .blog-nav-list{
   display: flex;
@@ -48,10 +66,42 @@
   font-size: 35px;
   color: rgb(69, 90, 100);
   font-family: 'bernier';
+  margin-bottom: 20px;
+  @include tablets{
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+  @include phones{
+   font-size: 21px; 
+   margin-bottom: 20px;
+  }
 }
 .blog-list{
   max-width: 680px;
 }
+.blog__item{
+  margin-bottom: 70px;
+  @include tablets{
+    margin-bottom: 50px;
+  }
+}
+.blog-desc{
+  margin-bottom: 20px;
+  @include tablets{
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  @include phones{
+    margin-bottom: 20px;
+  }
+}
+.date{
+  color: rgba(0, 191, 165, 0.702);
+  @include tablets{
+    font-size: 14px;
+  }
+}
 .triangle-polygon_blog{
   fill: #fff;
 }
+
