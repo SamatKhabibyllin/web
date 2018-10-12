@@ -1,0 +1,27 @@
+[
+  {
+    "skilsGroup": "Frontend",
+    "skils": {
+      "html5": 90,
+      "css3": 80,
+      "JavaScript & JQuery": 30
+    }
+  },
+  {
+    "skilsGroup": "Backend",
+    "skils": {
+      "Php": 90,
+      "MySql": 80,
+      "Node js & npm": 30,
+      "Mongo db": 40
+    }
+  },
+  {
+    "skilsGroup": "WorkFlow",
+    "skils": {
+      "Git": 90,
+      "Gulp": 80,
+      "Yarn": 30
+    }
+  }
+]

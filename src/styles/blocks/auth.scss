@@ -142,10 +142,13 @@
     font-size: 14px;
     margin: 0;
     font-weight: 300;
+    bottom: 10px;
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+    text-align: center;
   }
 }
-}
-
 .icon-social_welcome{
   &:hover{
     fill: #00bfa5 !important;

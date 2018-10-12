@@ -13,6 +13,10 @@ html(lang="ru")
     link(rel='stylesheet' href='/styles/main.min.css')
   body
     .wrapper
-      block content
+      .maincontent
+        block content
+
+      include ./components/entry.pug
+      
     script(src='/scripts/main.bundle.js')
     

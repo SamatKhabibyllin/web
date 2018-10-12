@@ -184,8 +184,6 @@
   }
 }
 .skils-row__item{
-  width: 110px;
-  height: 110px;
   position: relative;
   margin-right: 35px;
   &:last-child{
@@ -201,7 +199,9 @@
 }
 .skill{
   fill: none;
-  stroke-width: 15;
+  stroke-width: 20px;
+  width: 110px;
+  height: 110px;
 }
 .svg-circle__first{
   stroke: #dfdcd5;
@@ -209,8 +209,8 @@
 .svg-circle__second{
   stroke: #65ccbb;
   stroke-dasharray: .0010 282.6;
-  transition: 1s;
 }
+
 .socials__link_circle{
   display: flex;
   align-items: center;
