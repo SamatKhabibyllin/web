@@ -1,6 +1,11 @@
+.about,.works,.blog{
+  position: relative;
+}
 .triangle{
   display: block;
   fill: transparent;
+  position: absolute;
+  bottom: 100%;
  }
 .triangle-left_fill_white{
   fill:#EFEEE9;

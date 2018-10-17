@@ -1,33 +1,50 @@
 import Vue from 'vue';
 
+const skill = {
+  template: '#skill',
+  props: {
+    title: String,
+    percentage: Number
+  },
+  methods: {
+    drawCircleDependOnPercentage(){
+      const circle = this.$refs.circle;
+      const currentPercent = parseInt(
+      getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
+      );
+      const requireDashoffset = (currentPercent / 100) * (100 - this.percentage);
 
-const skil = {
-  template: "#skil"
+      circle.style.strokeDashoffset = requireDashoffset;
+    }
+  },
+  mounted(){
+    this.drawCircleDependOnPercentage();
+  }
 }
 
-const skilsItem = {
+const skillsRow = {
+  template: '#skills-list__item',
+  props: {
+    skills: Object
+  },
   components: {
-    skil
-  },
-  prop: {
-    skils: Object
-  },
-  template: "#skils-item"
+    skill: skill
+  }
 }
 
 new Vue({
-  el: "#skils-component",
+  el: '#skills-components',
   components: {
-    skilsItem
+    skillsRow: skillsRow
   },
   data(){
     return{
-      skils: []
+      skills: []
     }
   },
-  created() {
-    const data = require('../../../data/skils.json');
-    this.skils = data;
+  created(){
+    const data  = require('../../../data/skills.json');
+    this.skills = data;
   },
-  template: "#skils-list"
-});
+  template: '#skills-list'
+})
