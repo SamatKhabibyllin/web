@@ -40,10 +40,10 @@ new Vue({
     }
   },
   watch: {
-    currentIndex(value){
-      const worksNumCountedFromZero = this.works.lenght -1;
-      if (value > worksNumCountedFromZero) this.currentIndex = 0
-      if (value < 0) this.currentIndex = worksNumCountedFromZero
+    currentIndex(value) {
+      const workNumCountedFromZero = this.works.length -1;
+      if (value > workNumCountedFromZero) this.currentIndex = 0
+      if (value < 0) this.currentIndex = workNumCountedFromZero
     }
   },
   created(){
