@@ -129,7 +129,16 @@
     left: 0;
     width: 100%;
     height: 100%;
+   }
+}
+.slider__button_prev{
+  &:before{
     background: rgba(182, 180, 174, 0.7);
+  }
+}
+.slider__button_next{
+  &:before{
+    background: rgba(136, 131, 114, 0.5)
   }
 }
 .slider__button-container{

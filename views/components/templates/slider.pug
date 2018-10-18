@@ -1,8 +1,15 @@
 script(type="text/x-template")#slider-root
   .slider
-    info
-    display
-    btns
+    info(
+      :work="currenWork"
+    )
+    display(
+      :work="currenWork"
+    )
+    btns(
+      @slide="handleSlide"
+    )
+    
 
 
 
@@ -11,10 +18,10 @@ script(type="text/x-template")#slider-info
     .slider__info
       .slider__info-title
         .slider__info-title-text
-          .subtitle сайт школы онлайн образования
-        .slider__info-skills html, css, javascript
+          .subtitle {{ work.title }}
+        .slider__info-skills {{ work.skills }}
         .slider__info-button
-          a(href="work.link" target="_blank").iconed-button
+          a(:href="work.link" target="_blank").iconed-button
             .iconed-button__icon
               i.fa.fa-link
             .iconed-button__text Посмотреть сайт
@@ -23,22 +30,22 @@ script(type="text/x-template")#slider-info
 script(type="text/x-template")#slider-display
   .slider__display
     .slider__display-pic
-      img(src="/images/content/works-1.png", alt="").slider__big-pic
+      img(:src="work.photo", alt="").slider__big-pic
 
 
 script(type="text/x-template")#slider-btns
   .slider__buttons
-    .slider__button.slider__button_prev
+    .slider__button.slider__button_prev(@click="slide('prev')")
       div.slider__button-container
         div.slider__button-img-wrap
           img(src="/images/content/works-2.png", alt="").slider__button-pic
         .slider__button-arrow
           svg.slider__button-up
-            use(xlink:href="/images/icons/sprite.svg#portf_arrow_up")
-    .slider__button.slider__button_next
+            use(xlink:href="/images/icons/sprite.svg#portf_arrow_down")
+    .slider__button.slider__button_next(@click="slide('next')")
       div.slider__button-container
         div.slider__button-img-wrap
           img(src="/images/content/works-3.png", alt="").slider__button-pic
         .slider__button-arrow
           svg.slider__button-down
-            use(xlink:href="/images/icons/sprite.svg#portf_arrow_down")
+            use(xlink:href="/images/icons/sprite.svg#portf_arrow_up")
