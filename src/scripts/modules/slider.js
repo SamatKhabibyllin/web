@@ -16,9 +16,39 @@ const display = {
 
 const btns = {
   template: '#slider-btns',
+  props: {
+    works: Array,
+    index: Number
+},
+  data(){
+    return {
+      prevButtonWorks: [],
+      nextButtonWorks: []
+    }
+  },
+  created(){
+    this.prevButtonWorks = this.retransformWorksForButton('prev');
+    this.nextButtonWorks = this.retransformWorksForButton('next');
+  },
   methods: {
     slide(direction){
       this.$emit('slide', direction)
+    },
+    retransformWorksForButton(buttonDirection){
+      const worksArray = [...this.works];
+      const lastItem = worksArray[worksArray.length -1];
+      switch(buttonDirection){
+        case "prev":
+          worksArray.unshift(lastItem);
+          worksArray.pop();
+          break;
+        case "next":
+          worksArray.push(worksArray[0]);
+          worksArray.shift();
+          break;
+      }
+
+      return worksArray;
     }
   }
 }
@@ -41,9 +71,7 @@ new Vue({
   },
   watch: {
     currentIndex(value){
-      const worksNumCountedFromZero = this.works.lenght -1;
-      if (value > worksNumCountedFromZero) this.currentIndex = 0
-      if (value < 0) this.currentIndex = worksNumCountedFromZero
+      this.loopCurrentIndex(value);
     }
   },
   created(){
@@ -51,14 +79,19 @@ new Vue({
     this.works = data;
   },
   methods: {
+    loopCurrentIndex(value){
+      const worksNumFromZero = this.works.length -1;
+      if (value > worksNumFromZero) this.currentIndex = 0
+      if (value < 0) this.currentIndex = worksNumFromZero
+    },
     handleSlide(direction){
      switch(direction){
        case 'prev':
         this.currentIndex = this.currentIndex -1;
         break;
-        case 'next':
-          this.currentIndex = this.currentIndex +1;
-          break;
+      case 'next':
+        this.currentIndex = this.currentIndex +1;
+        break;
      }
       
     }
