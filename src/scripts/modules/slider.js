@@ -70,8 +70,10 @@ new Vue({
     }
   },
   watch: {
-    currentIndex(value){
-      this.loopCurrentIndex(value);
+    currentIndex(value) {
+      const workNumCountedFromZero = this.works.length -1;
+      if (value > workNumCountedFromZero) this.currentIndex = 0
+      if (value < 0) this.currentIndex = workNumCountedFromZero
     }
   },
   created(){
