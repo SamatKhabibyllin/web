@@ -95,3 +95,42 @@
 .title_color_white{
   color: #fff;
 }
+.section__title{
+  position: absolute;
+  left: 50%;
+}
+.title-svg-works{
+  fill: #f0eee7;
+  width: 500px;
+  height: 160px;
+  margin-left: -250px;
+  @include tablets{
+    width: 396px;
+    height: 120px;
+    margin-left: -198px;
+  }
+  @include phones{
+    width: 250px;
+    height: 80px;
+    margin-left: -125px;
+  }
+}
+.title-svg-about{
+  width: 500px;
+  height: 160px;
+  margin-left: -250px;
+  fill: #ebecec;
+  margin-top: -50px;
+  @include tablets{
+    width: 396px;
+    height: 120px;
+    margin-left: -198px;
+    margin-top: -30px;
+  }
+  @include phones{
+    width: 250px;
+    height: 80px;
+    margin-left: -125px;
+    margin-top: -10px;
+  }
+}

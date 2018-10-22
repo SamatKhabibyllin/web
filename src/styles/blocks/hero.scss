@@ -2,6 +2,8 @@
   min-height: 600px;
   position: relative;
   height: 100vh;
+  background: url('/images/bg/hero.jpg') center center no-repeat;
+  background-size: cover;
   &:before{
     content: '';
     position: absolute;

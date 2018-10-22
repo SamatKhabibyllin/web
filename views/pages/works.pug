@@ -4,12 +4,18 @@ block content
   include ../common/hero.pug 
 
   section.works
+    h2.section__title
+      svg.title-svg-works
+        use(xlink:href="/images/icons/sprite.svg#works_header")
     .works__title
       h2.title Мои работы
     .work__container
       #slider-component
 
   section.say-about
+    h2.section__title
+      svg.title-svg-about
+        use(xlink:href="/images/icons/sprite.svg#about_header")
     .say-about__title
       h2.title что обо мне говорят
     .say-about__container

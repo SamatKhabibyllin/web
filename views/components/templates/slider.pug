@@ -1,5 +1,5 @@
 script(type="text/x-template")#slider-root
-  .slider
+  .slide
     info(
       :work="currenWork"
     )
@@ -40,14 +40,14 @@ script(type="text/x-template")#slider-btns
     .slider__button.slider__button_prev(@click="slide('prev')")
       div.slider__button-container
         div.slider__button-img-wrap
-          img(:src="/images/content/works-2.png", alt="").slider__button-pic
+          img(:src="prevButtonWorks[index].photo", alt="").slider__button-pic
         .slider__button-arrow
           svg.slider__button-up
             use(xlink:href="/images/icons/sprite.svg#portf_arrow_down")
     .slider__button.slider__button_next(@click="slide('next')")
       div.slider__button-container
         div.slider__button-img-wrap
-          img(:src="/images/content/works-3.png", alt="").slider__button-pic
+          img(:src="nextButtonWorks[index].photo", alt="").slider__button-pic
         .slider__button-arrow
           svg.slider__button-down
             use(xlink:href="/images/icons/sprite.svg#portf_arrow_up")
