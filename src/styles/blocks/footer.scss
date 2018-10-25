@@ -1,9 +1,8 @@
 .footer{
   background-color: rgba(55, 62, 66, .851);
- position: absolute; 
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  margin-top: -146px;
+  position: relative;
+  z-index: 15;
   @include tablets{
     padding-top: 30px;
   }
@@ -81,4 +80,28 @@
     color: rgba(255, 255, 255, 0.502);
     font-weight: 100;
   }
+}
+.socials__link_circle{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c1d5d5;
+    transition: .2s;
+    &:hover{
+      background: #fff;
+      border-color: #fff;
+      transition: .2s;
+      .icons-social_circle{
+        fill: rgb(55, 62, 66);
+      }
+    }
+}
+.socials__item_circle{
+  margin-right: 15px;
+}
+.icons-social_circle{
+  fill: #97a3a4;
 }

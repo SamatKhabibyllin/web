@@ -13,6 +13,8 @@ block content
       #slider-component
 
   section.say-about
+    .bg-say-about
+      img(src='/images/bg/bg-form.jpg', alt='озеро на фоне гор').img-say-about
     h2.section__title
       svg.title-svg-about
         use(xlink:href="/images/icons/sprite.svg#about_header")
@@ -21,6 +23,9 @@ block content
     .say-about__container
       .recommendations
         .recommendation__left
+          .recommendation__symbol
+            svg.title-svg-about
+              use(xlink:href="/images/icons/sprite.svg#about_header")
           .recommendation-text
             p Этот парень проходил обучение не где то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
           .recommendation-user
@@ -42,21 +47,23 @@ block content
             .recommendation-name
               .recommendation-title Сабанцев Владимир
               .recommendation-desc преподаватель
-      .form-container
-        form(action="", method="post").form
-          .form__title
-            .subtitle связаться со мной
-          .input-block
-            input(type="text" placeholder="Имя").input.input-name
-            input(type="email" placeholder="Email").input.input-email
-            textarea(name="message", placeholder="Ваше сообщение").taxtarea
-          .form-btns
-            input(type="submit" value="Отправить").submit
-            input(type="reset" value="Очистить").reset
-        .arrow-up
-          a(href="#").arrow-up__links
-              svg.arrow-up-svg
-                use(xlink:href="/images/icons/sprite.svg#arrow")
+      
+      .blur-wrapper
+        .blur
+            //- form(action="", method="post").form
+            //-   .form__title
+            //-     .subtitle связаться со мной
+            //-   .input-block
+            //-     input(type="text" placeholder="Имя").input.input-name
+            //-     input(type="email" placeholder="Email").input.input-email
+            //-     textarea(name="message", placeholder="Ваше сообщение").taxtarea
+            //-   .form-btns
+            //-     input(type="submit" value="Отправить").submit
+            //-     input(type="reset" value="Очистить").reset
+      .arrow-up
+        a(href="#").arrow-up__links
+            svg.arrow-up-svg
+              use(xlink:href="/images/icons/sprite.svg#arrow")
   include ../common/footer.pug  
 
 

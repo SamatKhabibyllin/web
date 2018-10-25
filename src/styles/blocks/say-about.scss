@@ -1,8 +1,10 @@
 .say-about{
-  background: url('/images/bg/bg-form.jpg') center center no-repeat;
-  background-size: cover;
+  // background: url('/images/bg/bg-form.jpg') center center no-repeat;
+  // background-size: cover;
+  position: relative;
   padding-top: 70px;
   padding-bottom: 70px;
+  height: 1290px;
   @include tablets{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -12,12 +14,23 @@
     padding-bottom: 40px;
   }
 }
+.bg-say-about{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.img-say-about{
+  width: 100%;
+}
 .say-about__title{
   text-align: center;
   max-width: 300px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
   @include tablets{
     max-width: 100%;
     margin-bottom: 50px;
@@ -30,6 +43,8 @@
 .say-about__container{
   max-width: 780px;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 .recommendations{
   display: flex;
@@ -149,4 +164,20 @@
   border-radius: 0 0 5px 0;
   color: #fff;
   border-left: 1px solid #82b7b9;
+}
+.blur-wrapper{
+  position: absolute;
+  width: 380px;
+  height: 437px;
+  left: 50%;
+  margin-left: -190px;
+  top: 50%;
+}
+.blur{
+  width: 100%;
+  height: 100%;
+  
+  background: url('/images/bg/bg-form.jpg') center center no-repeat;
+  background-size: cover;
+  filter: blur(20px);
 }

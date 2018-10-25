@@ -1,9 +1,6 @@
 .hero{
-  min-height: 600px;
+  height: 650px;
   position: relative;
-  height: 100vh;
-  background: url('/images/bg/hero.jpg') center center no-repeat;
-  background-size: cover;
   &:before{
     content: '';
     position: absolute;
@@ -14,9 +11,18 @@
     width: 100%;
     height: 100%;
   }
+  @include phones{
+    height: 100vh;
+  }
+}
+.hero-bg{
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .hero-bg__img{
-  max-width: 100%;
+  width: 100%;
 }
 .hero__links{
   position: absolute;
@@ -139,11 +145,16 @@
 .section__title-hero{
   position: absolute;
 }
-// .arrow-down{
-//   border-bottom: 5px solid #fff;
-//   border-right: 5px solid #fff;
-//   border-top: 5px solid transparent;
-//   border-left: 5px solid transparent;
-//   width: 20px;
-//   height: 20px;
-// }
+.arrow-down{
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+.svg-arrow-down{
+  height: 26px;
+  width: 26px;
+  fill: #beced4;
+}
+.socials__link{
+  fill: #c2d6d5;
+}

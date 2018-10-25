@@ -1,6 +1,6 @@
 section.hero
-    //- .hero-bg
-    //-   img(src='/images/bg/hero.jpg').hero-bg__img
+    .hero-bg
+      img(src='/images/bg/hero.jpg').hero-bg__img
     .hero__links
       ul.socials
         li.socials__item
@@ -20,10 +20,10 @@ section.hero
         .hamburger-line
         .hamburger-line
         .hamburger-line
-    .hero__container
-      .section__title-hero
+    .section__title-hero
         svg.svg-title-hero
-          use(xlink:href="/src/images/icons/sprite.svg#porfolio_header")
+          use(xlink:href="/images/icons/sprite.svg#portfolio_header")
+    .hero__container
       .user
         .user__avatar
           img.user-img(src="/images/content/user.jpg", alt="аватар")
@@ -34,8 +34,8 @@ section.hero
 
     .hero__btn
       .arrow-down
-        svg.svg-arrow
-          use(xlink:href="/src/images/icons/sprite.svg#arrow")
+        svg.svg-arrow-down
+          use(xlink:href="/images/icons/sprite.svg#arrow_down")
   
     .about__triangle
       svg.triangle(viewbox="0 0 1000 85" preserveaspectration="none")
